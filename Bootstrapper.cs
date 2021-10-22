@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Windows;
+using System.Windows.Controls;
 using Caliburn.Micro;
 using SITUFishery.Shell.ViewModels;
+using SITUFishery.Helpers;
 
 namespace SITUFishery
 {
@@ -15,6 +17,10 @@ namespace SITUFishery
         public Bootstrapper()
         {
             Initialize();
+            ConventionManager.AddElementConvention<PasswordBox>(
+                PasswordBoxHelper.BoundPasswordProperty,
+                "Password",
+                "PasswordChanged");
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
