@@ -8,6 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Background="White">
     <Grid>
-        <TextBlock Text="Selamat Datang!" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="26" FontWeight="Bold" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Selamat Datang!" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="26" FontWeight="Bold" />
+            <Button x:Name="LoadPetakPage" Content="Data Petak" Width="100" Height="20" VerticalAlignment="Top" />
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" x:Name="ChildScreen" Height="auto" />
     </Grid>
 </UserControl>
