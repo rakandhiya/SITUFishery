@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SITUFishery.Models;
 using SITUFishery.DataAccess;
 using Caliburn.Micro;
+using SITUFishery.Messages;
 
 namespace SITUFishery.PetakModule.ViewModels
 {
@@ -25,6 +26,13 @@ namespace SITUFishery.PetakModule.ViewModels
             }
         }
 
+        private readonly IEventAggregator _eventAggregator;
+        public NewPetakViewModel(IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+            _eventAggregator.SubscribeOnPublishedThread(this);
+        }
+
         public bool CanSubmit => !string.IsNullOrEmpty(NoPetak);
 
         public void Submit()
@@ -34,8 +42,7 @@ namespace SITUFishery.PetakModule.ViewModels
                 NoPetak = NoPetak
             });
 
-            var conductor = Parent as IConductor;
-            conductor.ActivateItemAsync(new HomePetakViewModel());
+            _eventAggregator.PublishOnUIThreadAsync(new ChangeActivePageMessage(new HomePetakViewModel(_eventAggregator)));
         }
     }
 }

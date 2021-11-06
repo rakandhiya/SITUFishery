@@ -14,8 +14,6 @@ namespace SITUFishery.Authentication.ViewModels
     public class LoginViewModel : Screen
     {
         private string _username = "";
-        private string _password = null;
-
         public string Username
         {
             get {  return _username; }
@@ -27,6 +25,7 @@ namespace SITUFishery.Authentication.ViewModels
             } 
         }
 
+        private string _password = null;
         public string Password
         {
             get {  return _password; }
@@ -36,6 +35,13 @@ namespace SITUFishery.Authentication.ViewModels
                 NotifyOfPropertyChange(()  => Password);
                 NotifyOfPropertyChange(() => CanLogin);
             }
+        }
+
+        private readonly IEventAggregator _eventAggregator;
+        public LoginViewModel(IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+            eventAggregator.SubscribeOnPublishedThread(this);
         }
 
         public bool CanLogin => !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
@@ -48,7 +54,7 @@ namespace SITUFishery.Authentication.ViewModels
             if (isLoginSuccessful)
             {
                 var conductor = Parent as IConductor;
-                conductor.ActivateItemAsync(new HomeViewModel());
+                conductor.ActivateItemAsync(new HomeViewModel(_eventAggregator));
             }
             else
             {
