@@ -9,6 +9,7 @@ using SITUFishery.TebarModule.ViewModels;
 using SITUFishery.PakanModule.ViewModels;
 using SITUFishery.PakanHarianModule.ViewModels;
 using SITUFishery.AirHarianModule.ViewModels;
+using SITUFishery.PanenModule.ViewModels;
 using SITUFishery.Messages;
 using System.Threading;
 
@@ -59,6 +60,12 @@ namespace SITUFishery.Home.ViewModels
         public void LoadAirHarianPage()
         {
             ChildScreen = new HomeAirHarianViewModel(_eventAggregator);
+            ActivateItemAsync(ChildScreen);
+        }
+
+        public void LoadPanenPage()
+        {
+            ChildScreen = new HomePanenViewModel(_eventAggregator);
             ActivateItemAsync(ChildScreen);
         }
 

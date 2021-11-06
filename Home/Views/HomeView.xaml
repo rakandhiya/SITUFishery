@@ -20,6 +20,7 @@
             <Button x:Name="LoadPakanPage" Content="Data Pakan" Width="100" Height="20" VerticalAlignment="Top" />
             <Button x:Name="LoadPakanHarianPage" Content="Data Pakan Harian" Width="100" Height="20" VerticalAlignment="Top" />
             <Button x:Name="LoadAirHarianPage" Content="Data Air Harian" Width="100" Height="20" VerticalAlignment="Top" />
+            <Button x:Name="LoadPanenPage" Content="Data Panen" Width="100" Height="20" VerticalAlignment="Top" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" x:Name="ChildScreen" Height="auto" />
