@@ -17,6 +17,7 @@
             <TextBlock Text="Selamat Datang!" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="26" FontWeight="Bold" />
             <Button x:Name="LoadPetakPage" Content="Data Petak" Width="100" Height="20" VerticalAlignment="Top" />
             <Button x:Name="LoadTebarPage" Content="Data Tebar" Width="100" Height="20" VerticalAlignment="Top" />
+            <Button x:Name="LoadPakanPage" Content="Data Pakan" Width="100" Height="20" VerticalAlignment="Top" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" x:Name="ChildScreen" Height="auto" />

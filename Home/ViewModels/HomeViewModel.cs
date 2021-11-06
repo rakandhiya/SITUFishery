@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using SITUFishery.PetakModule.ViewModels;
 using SITUFishery.TebarModule.ViewModels;
+using SITUFishery.PakanModule.ViewModels;
 using SITUFishery.Messages;
 using System.Threading;
 
@@ -38,6 +39,12 @@ namespace SITUFishery.Home.ViewModels
         public void LoadTebarPage()
         {
             ChildScreen = new HomeTebarViewModel(_eventAggregator);
+            ActivateItemAsync(ChildScreen);
+        }
+
+        public void LoadPakanPage()
+        {
+            ChildScreen = new HomePakanViewModel(_eventAggregator);
             ActivateItemAsync(ChildScreen);
         }
 

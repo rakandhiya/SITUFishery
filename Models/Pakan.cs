@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SITUFishery.Models
 {
-    public class Petak
+    public class Pakan
     {
         public int Id { get; set; }
-        public string NoPetak { get; set; }
+        public string Nama { get; set; }
+        public int Stok { get; set; }
     }
 }
