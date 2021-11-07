@@ -9,24 +9,22 @@ namespace SITUFishery.DataAccess
 {
     public class LoginDAL
     {
-        public bool Login(string username, string password)
+        public static bool Login(string username, string password)
         {
-            using (SqlConnection connection = new SqlConnection(Helper.ConnectionVal("SITUFishery")))
-            {
-                string query = "SELECT * FROM dbo.Users WHERE Username=@username AND Password=@password";
-                
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.Add("@username", System.Data.SqlDbType.VarChar, 20).Value = username;
-                command.Parameters.Add("@password", System.Data.SqlDbType.VarChar, 20).Value = password;
-                
-                connection.Open();
-                command.Prepare();
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT * FROM dbo.Users WHERE Username=@username AND Password=@password";
 
-                SqlDataReader reader = command.ExecuteReader();
-                while(reader.Read())
-                {
-                    return true;
-                }
+            SqlCommand command = new(query, connection);
+            command.Parameters.Add("@username", System.Data.SqlDbType.VarChar, 20).Value = username;
+            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar, 20).Value = password;
+
+            connection.Open();
+            command.Prepare();
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                return true;
             }
 
             return false;

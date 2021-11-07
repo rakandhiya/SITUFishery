@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
-using SITUFishery.Authentication.ViewModels;
-
+using SITUFishery.Modules.AuthenticationModule.ViewModels;
 
 namespace SITUFishery.Shell.ViewModels
 {

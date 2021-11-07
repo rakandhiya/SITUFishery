@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="SITUFishery.Modules.PakanModule.Views.HomePakanView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SITUFishery.Modules.PakanModule.Views"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="LoadPageNew" Content="Tambah baru" Grid.Column="0" Grid.Row="0" />
+        <ListView ItemsSource="{Binding Path=Pakans}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="50"  DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Nama" Width="200" DisplayMemberBinding="{Binding Nama}" />
+                    <GridViewColumn Header="Stok (Kg)" Width="200" DisplayMemberBinding="{Binding Stok}" />
+                    <GridViewColumn Header="Actions" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Edit">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="Click">
+                                                <cal:ActionMessage MethodName="Select">
+                                                    <cal:Parameter Value="{Binding Path=Id}" />
+                                                </cal:ActionMessage>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </Button>
+                                    <Button Content="Delete">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="Click">
+                                                <cal:ActionMessage MethodName="Delete">
+                                                    <cal:Parameter Value="{Binding Path=Id}" />
+                                                </cal:ActionMessage>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>
