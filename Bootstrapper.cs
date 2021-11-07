@@ -17,7 +17,7 @@ namespace SITUFishery
         public Bootstrapper()
         {
             Initialize();
-            ConventionManager.AddElementConvention<PasswordBox>(
+            _ = ConventionManager.AddElementConvention<PasswordBox>(
                 PasswordBoxHelper.BoundPasswordProperty,
                 "Password",
                 "PasswordChanged");
@@ -25,7 +25,7 @@ namespace SITUFishery
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<ShellViewModel>();
+            _ = DisplayRootViewFor<ShellViewModel>();
         }
     }
 }

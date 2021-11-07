@@ -13,7 +13,7 @@ namespace SITUFishery.Shell.ViewModels
         public ShellViewModel()
         {
             IEventAggregator eventAggregator = new EventAggregator();
-            ActivateItemAsync(new LoginViewModel(eventAggregator));
+            _ = ActivateItemAsync(new LoginViewModel(eventAggregator));
         }
     }
 }
