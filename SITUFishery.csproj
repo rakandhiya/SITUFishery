@@ -17,6 +17,14 @@
     <None Remove="Misc\Fonts\Inter-Regular.ttf" />
     <None Remove="Misc\Fonts\Inter-SemiBold.ttf" />
     <None Remove="Misc\Fonts\Inter-Thin.ttf" />
+    <None Remove="Misc\MenuIcons\BigEatsSmall.png" />
+    <None Remove="Misc\MenuIcons\DashboardLayout.png" />
+    <None Remove="Misc\MenuIcons\Field.png" />
+    <None Remove="Misc\MenuIcons\FishScalesPattern.png" />
+    <None Remove="Misc\MenuIcons\Prawn.png" />
+    <None Remove="Misc\MenuIcons\RecycledWater.png" />
+    <None Remove="Misc\MenuIcons\Seed.png" />
+    <None Remove="Misc\MenuIcons\WaterPark.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +58,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Misc\Fonts\Inter-Thin.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\BigEatsSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\DashboardLayout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Field.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\FishScalesPattern.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Prawn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\RecycledWater.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Seed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\WaterPark.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

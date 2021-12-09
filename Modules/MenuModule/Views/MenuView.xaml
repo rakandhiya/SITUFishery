@@ -5,24 +5,104 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SITUFishery.Modules.MenuModule.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White">
+             d:DesignHeight="511" d:DesignWidth="915"
+             Background="#F8F8F8">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0">
-            <TextBlock Text="Selamat Datang!" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="26" FontWeight="Bold" />
-            <Button x:Name="LoadPetakPage" Content="Data Petak" Width="100" Height="20" VerticalAlignment="Top" />
-            <Button x:Name="LoadTebarPage" Content="Data Tebar" Width="100" Height="20" VerticalAlignment="Top" />
-            <Button x:Name="LoadPakanPage" Content="Data Pakan" Width="100" Height="20" VerticalAlignment="Top" />
-            <Button x:Name="LoadPakanHarianPage" Content="Data Pakan Harian" Width="100" Height="20" VerticalAlignment="Top" />
-            <Button x:Name="LoadAirHarianPage" Content="Data Air Harian" Width="100" Height="20" VerticalAlignment="Top" />
-            <Button x:Name="LoadPanenPage" Content="Data Panen" Width="100" Height="20" VerticalAlignment="Top" />
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <ContentControl Grid.Row="1" x:Name="ChildScreen" Height="auto" />
+        <StackPanel Grid.Column="0" Background="White">
+            <Button 
+                x:Name="LoadDashboard" 
+                Width="auto" 
+                Height="30" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image 
+                    x:Name="DashboardImage" 
+                    Source="/Misc/MenuIcons/DashboardLayout.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadPetakPage" 
+                Width="auto" 
+                Height="30" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/WaterPark.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadTebarPage" 
+                Width="auto" 
+                Height="30" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/Prawn.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadPakanPage"
+                Width="auto" 
+                Height="30" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/Seed.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadPakanHarianPage"
+                Width="auto" 
+                Height="28" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/BigEatsSmall.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadAirHarianPage"
+                Width="auto" 
+                Height="28" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/RecycledWater.png"/>
+            </Button>
+
+            <Button 
+                x:Name="LoadPanenPage"
+                Width="auto" 
+                Height="28" 
+                VerticalAlignment="Top" 
+                Margin="0, 25, 0, 0"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image
+                    Source="/Misc/MenuIcons/FishScalesPattern.png"/>
+            </Button>
+        </StackPanel>
+        
+        <ContentControl 
+            Grid.Column="1" 
+            x:Name="ChildScreen" 
+            Height="auto"/>
     </Grid>
 </UserControl>

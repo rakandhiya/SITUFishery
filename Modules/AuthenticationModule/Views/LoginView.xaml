@@ -9,13 +9,6 @@
              Background="#F8F8F8"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org">
-    <!--<StackPanel>
-        <TextBlock>Masuk SITUFishery</TextBlock>
-        <TextBox x:Name="Username" Width="250" Height="20" />
-        <PasswordBox x:Name="Password" Width="250" Height="20" />
-        <Button x:Name="Login" Content="Login" Width="80" Height="20" />
-    </StackPanel>-->
-
     <Grid 
         Height="338"
         Width="774">
@@ -52,7 +45,9 @@
             <TextBox 
                 x:Name="Username" 
                 Width="369" 
-                Height="38" />
+                Height="38" 
+                FontSize="16"
+                Padding="6"/>
 
             <TextBlock 
                 Text="Password" 
@@ -65,7 +60,9 @@
             <PasswordBox 
                 x:Name="Password" 
                 Width="369" 
-                Height="38" />
+                Height="38" 
+                FontSize="16"
+                Padding="6"/>
 
             <Button 
                 x:Name="Login" 
