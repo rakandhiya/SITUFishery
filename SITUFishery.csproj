@@ -8,8 +8,50 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Misc\Fonts\Inter-Black.ttf" />
+    <None Remove="Misc\Fonts\Inter-Bold.ttf" />
+    <None Remove="Misc\Fonts\Inter-ExtraBold.ttf" />
+    <None Remove="Misc\Fonts\Inter-ExtraLight.ttf" />
+    <None Remove="Misc\Fonts\Inter-Light.ttf" />
+    <None Remove="Misc\Fonts\Inter-Medium.ttf" />
+    <None Remove="Misc\Fonts\Inter-Regular.ttf" />
+    <None Remove="Misc\Fonts\Inter-SemiBold.ttf" />
+    <None Remove="Misc\Fonts\Inter-Thin.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.173" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.37" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Misc\Fonts\Inter-Black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-ExtraBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-ExtraLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\Fonts\Inter-Thin.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

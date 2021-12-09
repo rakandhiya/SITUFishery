@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SITUFishery.Shell.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        Title="SITUFishery" Height="511" Width="915"
+        Background="#F8F8F8">
     <Grid>
         <ContentControl x:Name="ActiveItem" />
     </Grid>

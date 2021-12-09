@@ -5,14 +5,81 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SITUFishery.Modules.AuthenticationModule.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White"
+             d:DesignHeight="511" d:DesignWidth="915"
+             Background="#F8F8F8"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org">
-    <StackPanel>
+    <!--<StackPanel>
         <TextBlock>Masuk SITUFishery</TextBlock>
         <TextBox x:Name="Username" Width="250" Height="20" />
         <PasswordBox x:Name="Password" Width="250" Height="20" />
         <Button x:Name="Login" Content="Login" Width="80" Height="20" />
-    </StackPanel>
+    </StackPanel>-->
+
+    <Grid 
+        Height="338"
+        Width="774">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="0.50*" />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle 
+            Grid.Column="0" 
+            Fill="#C4C4C4"
+            Width="356"
+            Height="338"/>
+
+        <StackPanel
+            Width="369"
+            Height="276"
+            Grid.Column="1"
+            Margin="49, 31, 0, 31">
+            <TextBlock 
+                Text="Hai,&#x0a;Masuk SITUFishery" 
+                FontSize="24"
+                FontWeight="Bold"
+                FontFamily="Misc/Fonts/#Inter"/>
+
+            <TextBlock 
+                Text="Username" 
+                FontSize="16"
+                FontWeight="ExtraLight"
+                FontFamily="Misc/Fonts/#Inter"
+                Margin="0, 27, 0, 0"
+                Foreground="#3D3D3D"/>
+
+            <TextBox 
+                x:Name="Username" 
+                Width="369" 
+                Height="38" />
+
+            <TextBlock 
+                Text="Password" 
+                FontSize="16"
+                FontWeight="ExtraLight"
+                FontFamily="Misc/Fonts/#Inter"
+                Margin="0, 17, 0, 0"
+                Foreground="#3D3D3D"/>
+
+            <PasswordBox 
+                x:Name="Password" 
+                Width="369" 
+                Height="38" />
+
+            <Button 
+                x:Name="Login" 
+                Content="Masuk" 
+                Width="89" 
+                Height="38" 
+                HorizontalAlignment="Left"
+                Margin="0, 22, 0, 0"
+                Background="#5F5BFF"
+                Foreground="White"
+                FontSize="16"
+                FontWeight="Medium"
+                FontFamily="Misc/Fonts/#Inter"
+                BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
 </UserControl>
