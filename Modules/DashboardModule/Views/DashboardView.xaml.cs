@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SITUFishery.Modules.MenuModule.Views
+namespace SITUFishery.Modules.DashboardModule.Views
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for DashboardView.xaml
     /// </summary>
-    public partial class MenuView : UserControl
+    public partial class DashboardView : UserControl
     {
-        public MenuView()
+        public DashboardView()
         {
             InitializeComponent();
-
-            Application.Current.MainWindow.WindowState = WindowState.Maximized;
         }
     }
 }

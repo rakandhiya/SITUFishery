@@ -17,11 +17,15 @@
             <ColumnDefinition Width="0.50*" />
         </Grid.ColumnDefinitions>
 
-        <Rectangle 
+        <Grid 
             Grid.Column="0" 
-            Fill="#C4C4C4"
             Width="356"
-            Height="338"/>
+            Height="338">
+
+            <Image Source="/Misc/MenuIcons/login_menu_image.jfif"
+                   Width="356"
+                   Height="338"/>
+        </Grid>
 
         <StackPanel
             Width="369"

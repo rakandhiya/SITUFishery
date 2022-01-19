@@ -138,5 +138,15 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static int SumBenihTebar()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT SUM(JumlahKantong * BenihPerKantong) FROM dbo.Tebar";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            return Convert.ToInt32(command.ExecuteScalar());
+        }
     }
 }

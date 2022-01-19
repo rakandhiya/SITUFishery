@@ -105,5 +105,15 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static int Count()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT COUNT(*) FROM dbo.Petak";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            return Convert.ToInt32(command.ExecuteScalar());
+        }
     }
 }

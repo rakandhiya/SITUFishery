@@ -9,7 +9,7 @@ namespace SITUFishery.DataAccess
 {
     public class LoginDAL
     {
-        public static bool Login(string username, string password)
+        public static string Login(string username, string password)
         {
             using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
             string query = "SELECT * FROM dbo.Users WHERE Username=@username AND Password=@password";
@@ -24,10 +24,10 @@ namespace SITUFishery.DataAccess
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                return true;
+                return username;
             }
 
-            return false;
+            return "";
         }
     }
 }

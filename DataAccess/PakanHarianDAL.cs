@@ -143,5 +143,17 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static double AveragePakan()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT AVG(Quantity) FROM dbo.PakanHarian";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            var result = command.ExecuteScalar();
+
+            return result.Equals(DBNull.Value) ? 0 : (double)result;
+        }
     }
 }

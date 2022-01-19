@@ -5,32 +5,104 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SITUFishery.Modules.PanenModule.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+             d:DesignHeight="511" d:DesignWidth="870"
+             Background="#F8F8F8"
+             FontFamily="/Misc/Fonts/#Inter"
+             FontSize="12">
+    <Border
+        Padding="19, 0, 19, 19">
+        <StackPanel>
+            <TextBlock 
+                Text="Ubah Data Panen"
+                FontWeight="Medium"
+                FontSize="22"/>
+            <TextBlock 
+                Text="Ubah data panen"
+                FontWeight="ExtraLight"
+                FontSize="12"
+                Margin="0, 0, 0, 13"/>
+            <Border
+                BorderThickness="19"
+                BorderBrush="White">
+                <StackPanel
+                    Background="White">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="16" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="16" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+                        <TextBlock 
+                            Text="Nomor Petak" 
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="6"
+                            VerticalAlignment="Center"
+                            Margin="0"/>
 
-        <ComboBox Grid.Row="0" Grid.Column="0" x:Name="Petaks" 
-                  SelectedItem="{Binding SelectedPetak, Mode=TwoWay}"
-                  SelectedIndex="{Binding SelectedPetakIndex, Mode=TwoWay}"
-                  DisplayMemberPath="NoPetak"/>
-        <TextBox x:Name="BeratTotal" Grid.Row="1" Grid.Column="0" Width="100" />
-        <DatePicker x:Name="Tanggal" Grid.Row="2" Grid.Column="0" />
-        <Button x:Name="Submit" Grid.Row="3" Grid.Column="0"  Content="Submit" />
-    </Grid>
+                        <ComboBox 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            x:Name="Petaks" 
+                            SelectedItem="{Binding SelectedPetak, Mode=TwoWay}"
+                            SelectedIndex="{Binding SelectedPetakIndex, Mode=TwoWay}"
+                            DisplayMemberPath="NoPetak"
+                            Text="-- Pilih Pakan --"
+                            Background="White"
+                            FontSize="13"
+                            Padding="6"/>
+
+                        <TextBlock 
+                            Text="Berat Total" 
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Padding="6"
+                            VerticalAlignment="Center"
+                            Margin="0"/>
+
+                        <TextBox 
+                            x:Name="BeratTotal" 
+                            Grid.Row="2" 
+                            Grid.Column="1"
+                            Padding="6"
+                            FontSize="13"/>
+
+                        <TextBlock 
+                            Text="Tanggal Panen" 
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Padding="6"
+                            VerticalAlignment="Center"
+                            Margin="0"/>
+
+                        <DatePicker 
+                            x:Name="Tanggal" 
+                            Grid.Row="4" 
+                            Grid.Column="1"
+                            Padding="6"
+                            FontSize="13"/>
+                    </Grid>
+                    <Button 
+                        x:Name="Submit" 
+                        Content="Submit" 
+                        Width="69"
+                        Height="30"
+                        Background="#5F5BFF"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        FontSize="12"
+                        BorderThickness="0"
+                        HorizontalAlignment="Left"
+                        Margin="0, 24, 0, 0"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Border>
 </UserControl>

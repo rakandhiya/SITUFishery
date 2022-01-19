@@ -5,60 +5,90 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SITUFishery.Modules.PetakModule.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="511" d:DesignWidth="870"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:cal="http://www.caliburnproject.org"
-             Background="White">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+             Background="#F8F8F8"
+             FontFamily="/Misc/Fonts/#Inter"
+             FontSize="12">
+    <Border
+        Padding="19, 0, 19, 19">
+        <StackPanel>
+            <TextBlock 
+                Text="Data Petak"
+                FontWeight="Medium"
+                FontSize="22"/>
+            <TextBlock 
+                Text="Berisi data kode petakan yang ada di tambak"
+                FontWeight="ExtraLight"
+                FontSize="12"
+                Margin="0, 0, 0, 13"/>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Button x:Name="LoadPageNew" Content="Tambah baru" Grid.Column="0" Grid.Row="0" />
-        <ListView ItemsSource="{Binding Path=Petaks}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Id" Width="50"  DisplayMemberBinding="{Binding Id}" />
-                    <GridViewColumn Header="No. Petak" Width="200" DisplayMemberBinding="{Binding NoPetak}" />
-                    <GridViewColumn Header="Actions" Width="200">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Content="Edit">
-                                        <i:Interaction.Triggers>
-                                            <i:EventTrigger EventName="Click">
-                                                <cal:ActionMessage MethodName="Select">
-                                                    <cal:Parameter Value="{Binding Path=Id}" />
-                                                </cal:ActionMessage>
-                                            </i:EventTrigger>
-                                        </i:Interaction.Triggers>
-                                    </Button>
-                                    <Button Content="Delete">
-                                        <i:Interaction.Triggers>
-                                            <i:EventTrigger EventName="Click">
-                                                <cal:ActionMessage MethodName="Delete">
-                                                    <cal:Parameter Value="{Binding Path=Id}" />
-                                                </cal:ActionMessage>
-                                            </i:EventTrigger>
-                                        </i:Interaction.Triggers>
-                                    </Button>
-                                </StackPanel>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
-    </Grid>
+            <Border 
+                    BorderBrush="White" 
+                    BorderThickness="19">
+                <StackPanel Background="White">
+                    <Button 
+                            x:Name="LoadPageNew" 
+                            Content="Tambah"
+                            Width="69"
+                            Height="30"
+                            Background="#5F5BFF"
+                            Foreground="White"
+                            FontWeight="Medium"
+                            FontSize="12"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0, 0, 0, 22"/>
+                    <ListView ItemsSource="{Binding Path=Petaks}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="100"  DisplayMemberBinding="{Binding Id}" />
+                                <GridViewColumn Header="No. Petak" Width="500" DisplayMemberBinding="{Binding NoPetak}" />
+                                <GridViewColumn Header="Actions" Width="160">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button 
+                                                        Content="Edit"
+                                                        FontSize="12"
+                                                        Padding="6"
+                                                        Margin="0, 0, 10, 0"
+                                                        Background="#B9B9B9"
+                                                        FontWeight="Medium"
+                                                        BorderThickness="0">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="Click">
+                                                            <cal:ActionMessage MethodName="Select">
+                                                                <cal:Parameter Value="{Binding Path=Id}" />
+                                                            </cal:ActionMessage>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Button>
+                                                <Button 
+                                                        Content="Delete"
+                                                        FontSize="12"
+                                                        Padding="6"
+                                                        Background="#B9B9B9"
+                                                        FontWeight="Medium"
+                                                        BorderThickness="0">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="Click">
+                                                            <cal:ActionMessage MethodName="Delete">
+                                                                <cal:Parameter Value="{Binding Path=Id}" />
+                                                            </cal:ActionMessage>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Border>
 </UserControl>

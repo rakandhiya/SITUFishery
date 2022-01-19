@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using Caliburn.Micro;
 using SITUFishery.DataAccess;
 using SITUFishery.Modules.MenuModule.ViewModels;
+using SITUFishery.Messages;
 
 namespace SITUFishery.Modules.AuthenticationModule.ViewModels
 {
@@ -49,12 +50,15 @@ namespace SITUFishery.Modules.AuthenticationModule.ViewModels
 
         public void Login()
         {
-            bool isLoginSuccessful = LoginDAL.Login(Username, Password);
+            string loggedInUser = LoginDAL.Login(Username, Password);
 
-            if (isLoginSuccessful)
+            if (!string.IsNullOrWhiteSpace(loggedInUser))
             {
+
                 IConductor? conductor = Parent as IConductor;
                 conductor.ActivateItemAsync(new MenuViewModel(_eventAggregator));
+
+                _ = _eventAggregator.PublishOnUIThreadAsync(new ChangeActiveUserMessage(loggedInUser));
             }
             else
             {

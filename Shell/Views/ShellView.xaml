@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:SITUFishery.Shell.Views"
         mc:Ignorable="d"
         Title="SITUFishery" Height="511" Width="915"
+        Icon="/Misc/MenuIcons/icon.ico"
         Background="#F8F8F8">
     <Grid>
         <ContentControl x:Name="ActiveItem" />

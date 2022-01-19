@@ -18,13 +18,18 @@
     <None Remove="Misc\Fonts\Inter-SemiBold.ttf" />
     <None Remove="Misc\Fonts\Inter-Thin.ttf" />
     <None Remove="Misc\MenuIcons\BigEatsSmall.png" />
-    <None Remove="Misc\MenuIcons\DashboardLayout.png" />
-    <None Remove="Misc\MenuIcons\Field.png" />
-    <None Remove="Misc\MenuIcons\FishScalesPattern.png" />
+    <None Remove="Misc\MenuIcons\HomeButton.png" />
+    <None Remove="Misc\MenuIcons\icon.ico" />
+    <None Remove="Misc\MenuIcons\login_menu_image.jfif" />
+    <None Remove="Misc\MenuIcons\Logout.png" />
+    <None Remove="Misc\MenuIcons\Male User.png" />
     <None Remove="Misc\MenuIcons\Prawn.png" />
-    <None Remove="Misc\MenuIcons\RecycledWater.png" />
     <None Remove="Misc\MenuIcons\Seed.png" />
-    <None Remove="Misc\MenuIcons\WaterPark.png" />
+    <None Remove="Misc\MenuIcons\Shutdown.png" />
+    <None Remove="Misc\MenuIcons\Spiderweb.png" />
+    <None Remove="Misc\MenuIcons\wallpaper_depan.jpg" />
+    <None Remove="Misc\MenuIcons\Water.png" />
+    <None Remove="Misc\MenuIcons\WaterWheel.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,25 +68,37 @@
     <Resource Include="Misc\MenuIcons\BigEatsSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Misc\MenuIcons\DashboardLayout.png">
+    <Resource Include="Misc\MenuIcons\HomeButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Misc\MenuIcons\Field.png">
+    <Resource Include="Misc\MenuIcons\icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Misc\MenuIcons\FishScalesPattern.png">
+    <Resource Include="Misc\MenuIcons\login_menu_image.jfif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Logout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Male User.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Misc\MenuIcons\Prawn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Misc\MenuIcons\RecycledWater.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Misc\MenuIcons\Seed.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Misc\MenuIcons\WaterPark.png">
+    <Resource Include="Misc\MenuIcons\Spiderweb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\wallpaper_depan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\Water.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Misc\MenuIcons\WaterWheel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

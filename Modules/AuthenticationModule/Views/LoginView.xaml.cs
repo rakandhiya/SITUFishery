@@ -23,6 +23,8 @@ namespace SITUFishery.Modules.AuthenticationModule.Views
         public LoginView()
         {
             InitializeComponent();
+
+            Application.Current.MainWindow.WindowState = WindowState.Normal;
         }
     }
 }

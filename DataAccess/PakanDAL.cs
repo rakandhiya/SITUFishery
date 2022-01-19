@@ -109,5 +109,15 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static int SumStok()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT SUM(Stok) FROM dbo.Pakan";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            return Convert.ToInt32(command.ExecuteScalar());
+        }
     }
 }

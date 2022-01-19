@@ -129,5 +129,15 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static int SumBeratTotal()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT SUM(BeratTotal) FROM dbo.Panen";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            return Convert.ToInt32(command.ExecuteScalar());
+        }
     }
 }

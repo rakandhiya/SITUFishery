@@ -1,0 +1,197 @@
+﻿<UserControl x:Class="SITUFishery.Modules.DashboardModule.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SITUFishery.Modules.DashboardModule.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="511" d:DesignWidth="870"
+             Background="#F8F8F8"
+             FontFamily="/Misc/Fonts/#Inter"
+             FontSize="12">
+    <Border
+            Padding="19, 0, 19, 19">
+        <StackPanel>
+            <TextBlock 
+                    Text="Dashboard"
+                    FontWeight="Medium"
+                    FontSize="22"/>
+            <TextBlock 
+                    Text="Selamat datang di Dashboard SITUFishery!"
+                    FontWeight="ExtraLight"
+                    FontSize="12"
+                    Margin="0, 0, 0, 13"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="19" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="19" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="19" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Border
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Jumlah Petakan"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="CountPetak" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <Border
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Stok Pakan"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="SumStokPakan" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <Border
+                        Grid.Row="0"
+                        Grid.Column="4"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Total Benih Tebar"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="SumBenihTebar" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <Border
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Rerata Pakan Harian"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="AveragePakanHarian" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <Border
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Rerata PH Air"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="AveragePHHarian" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <Border
+                        Grid.Row="2"
+                        Grid.Column="4"
+                        Padding="11"
+                        Background="White">
+                    <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="White">
+                        <TextBlock 
+                                Text="Total Panen"
+                                FontSize="11"
+                                FontWeight="ExtraLight"/>
+
+                        <TextBlock
+                                x:Name="SumTotalPanen" 
+                                FontSize="38"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Bottom"/>
+                    </Grid>
+                </Border>
+
+                <TextBlock 
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="Report Pengunaan SDM"
+                        FontSize="15"
+                        FontWeight="Medium"/>
+
+                <ComboBox
+                    x:Name="Months"
+                    Grid.Row="4"
+                    Grid.Column="4"
+                    SelectedItem="{Binding SelectedMonth}"/>
+
+                <DataGrid 
+                        x:Name="ReportPenggunaanSDMs"
+                        ColumnWidth="*"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Margin="0, 10, 0, 0"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>

@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace SITUFishery.Modules.MenuModule.Views
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MenuView : UserControl
+    public partial class UserControl1 : UserControl
     {
-        public MenuView()
+        public UserControl1()
         {
             InitializeComponent();
-
-            Application.Current.MainWindow.WindowState = WindowState.Maximized;
         }
     }
 }

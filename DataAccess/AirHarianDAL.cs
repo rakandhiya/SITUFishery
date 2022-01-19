@@ -141,5 +141,17 @@ namespace SITUFishery.DataAccess
 
             return true;
         }
+
+        public static double AveragePH()
+        {
+            using SqlConnection connection = new(Helper.ConnectionVal("SITUFishery"));
+            string query = "SELECT AVG(PH) FROM dbo.AirHarian";
+            SqlCommand command = new(query, connection);
+
+            connection.Open();
+            var result = command.ExecuteScalar();
+
+            return result.Equals(DBNull.Value) ? 0 : (double)result;
+        }
     }
 }

@@ -5,24 +5,61 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SITUFishery.Modules.PetakModule.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
+             d:DesignHeight="511" d:DesignWidth="870"
+             Background="#F8F8F8"
+             FontFamily="/Misc/Fonts/#Inter"
+             FontSize="12">
+    <Border
+        Padding="19, 0, 19, 19">
+        <StackPanel>
+            <TextBlock 
+                Text="Tambah data petakan"
+                FontWeight="Medium"
+                FontSize="22"/>
+            <TextBlock 
+                Text="Tambah data petakan baru"
+                FontWeight="ExtraLight"
+                FontSize="12"
+                Margin="0, 0, 0, 13"/>
+            <Border
+                BorderThickness="19"
+                BorderBrush="White">
+                <StackPanel
+                    Background="White">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+                        <TextBlock 
+                            Text="Nomor Petakan" 
+                            Grid.Column="0"
+                            Padding="6"
+                            VerticalAlignment="Center"
+                            Margin="0"/>
 
-        <TextBox x:Name="NoPetak" MinWidth="100" Grid.Row="0" Grid.Column="0" />
-
-        <Button x:Name="Submit" Content="Submit" Grid.Row="1" Grid.Column="0" />
-    </Grid>
+                        <TextBox 
+                            x:Name="NoPetak" 
+                            Width="auto"
+                            Grid.Column="1"
+                            Padding="6"
+                            FontSize="13"/>
+                    </Grid>
+                    <Button 
+                        x:Name="Submit" 
+                        Content="Submit" 
+                        Width="69"
+                        Height="30"
+                        Background="#5F5BFF"
+                        Foreground="White"
+                        FontWeight="Medium"
+                        FontSize="12"
+                        BorderThickness="0"
+                        HorizontalAlignment="Left"
+                        Margin="0, 24, 0, 0"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Border>
 </UserControl>
